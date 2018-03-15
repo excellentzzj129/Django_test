@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>練習</title>
+</head>
+<body>
+    <form action="/search-post" method="post">
+        {% csrf_token %} <!--cross site request forgery 防止僞裝提交請求功能-->
+        <input type="text" name="q">
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>{{ rlt }} </p><!--爲表格處理結果預留位置 -->
+</body>
+</html>
